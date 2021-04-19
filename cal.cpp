@@ -68,11 +68,13 @@ string standardizedExpression(string expression)
         }
         if (expression[i] == '(')
         {
-            ans + " " + expression[i];
+            ans = ans + expression[i] + " ";
+            continue;
         }
         if (expression[i] == ')')
         {
-            ans = ans + expression[i] + " ";
+            ans = ans + " " + expression[i];
+            continue;
         }
         if (isOperator(expression[i]))
         {
